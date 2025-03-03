@@ -1,0 +1,11 @@
+streamlit
+tomotopy
+matplotlib
+numpy
+gensim
+pyLDAvis
+pandas
+jieba
+cycler
+streamlit-component
+tqdm
