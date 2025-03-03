@@ -7,5 +7,5 @@ pyLDAvis
 pandas
 jieba
 cycler
-streamlit-component
+
 tqdm
