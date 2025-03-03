@@ -14,11 +14,12 @@ from tqdm import tqdm
 import matplotlib.font_manager as fm
 
 # 添加字体文件路径
-font_path = 'SimHei.ttf'  
-font_name = fm.FontProperties(fname=font_path).get_name()
+font_path = 'SimHei.ttf'  # 确保路径正确
+fm.fontManager.addfont(font_path)  # 临时注册新的全局字体
 
-plt.rcParams['font.family'] = font_name
-plt.rcParams['axes.unicode_minus'] = False  # 修复负号显示
+# 设置字体
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 
 @st.cache_data
