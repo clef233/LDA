@@ -11,10 +11,15 @@ from cycler import cycler
 import os
 import streamlit.components.v1 as components
 from tqdm import tqdm
+import matplotlib.font_manager as fm
 
-# 设置中文显示
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 支持中文
-plt.rcParams['axes.unicode_minus'] = False    # 修复负号显示
+# 添加字体文件路径
+font_path = 'SimHei.ttf'  
+font_name = fm.FontProperties(fname=font_path).get_name()
+
+plt.rcParams['font.family'] = font_name
+plt.rcParams['axes.unicode_minus'] = False  # 修复负号显示
+
 
 @st.cache_data
 def load_data(data_file, stopwords_file):
